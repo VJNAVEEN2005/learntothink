@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import Search from "./Search";
 
 const Navbar = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,18 +22,8 @@ const Navbar = (props) => {
 
             <div className=" flex  md:items-center gap-6 md:gap-10">
               <div className=" hidden md:block">
-                <div className=" flex items-center border-black border bg-white pr-2 rounded-3xl">
-                  <input
-                    className="text-black rounded-l-full p-2"
-                    type="search"
-                    name=""
-                    id=""
-                  />
-                  <img
-                    className="w-5 h-5 cursor-pointer"
-                    src="https://img.icons8.com/?size=100&id=59878&format=png&color=000000"
-                    alt=""
-                  />
+                <div className=" scale-75">
+                  <Search/>
                 </div>
               </div>
 
@@ -60,7 +51,7 @@ const Navbar = (props) => {
                   className={
                     isMenuOpen
                       ? " border-2 border-black md:border-none  md:top-0 right-1 px-8 py-5 top-16 transition-all bg-white dark:bg-Primary-black flex flex-col md:flex-row gap-5 dark:text-white font-medium md:text-xl md:relative fixed "
-                      : "  md:top-0 -right-[100%] px-8 py-5 top-16 bg-white transition-all dark:bg-Primary-black flex flex-col md:flex-row gap-5 dark:text-white font-medium md:text-xl md:relative fixed "
+                      : "  md:top-0 md:right-0 -right-[100%] px-8 py-5 top-16 bg-white transition-all dark:bg-Primary-black flex flex-col md:flex-row gap-5 dark:text-white font-medium md:text-xl md:relative fixed "
                   }
                 >
                   <li>

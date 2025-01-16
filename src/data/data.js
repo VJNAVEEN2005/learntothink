@@ -1,18 +1,10 @@
 import dbms from './dbms/dbms1.md';
 import interview from './interview/interview1.md';
-import python from './language/python.md'
+import python from './language/python.md';
 
-export const mainData = [
-  { Head: "concept", Topic: "dbms" },
-  { Head: "concept", Topic: "interview" },
-  { Head: "language", Topic: "python"}
+// Consolidate all categories into one list
+export const allData = [
+  { Category: "concept", Topic: "dbms", content: dbms },
+  { Category: "concept", Topic: "interview", content: interview },
+  { Category: "language", Topic: "python", content: python },
 ];
-
-export const conceptData = [
-  { Topic: "dbms", content: dbms },
-  { Topic: "interview", content: interview }
-];
-
-export const languageData = [
-    {Topic: "python", content: python},
-]
