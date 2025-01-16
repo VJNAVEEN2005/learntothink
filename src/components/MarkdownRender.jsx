@@ -13,7 +13,7 @@ const MarkdownRender = (props) => {
         fetch(props.content)
           .then((response) => response.text())
           .then((text) => setMarkdownContent(text));
-      }, []);
+      }, [props.content]);
 
   return (
     <>
