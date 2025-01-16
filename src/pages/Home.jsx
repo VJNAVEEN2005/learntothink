@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "motion/react";
 import Content from "../components/Content";
 
 const Home = () => {

@@ -12,7 +12,7 @@ const Navbar = (props) => {
     <>
       <header>
         <nav>
-          <div className=" flex justify-between items-center md:py-2 px-4 bg-white transition-all dark:bg-Primary-black border-b-2 border-b-sky-950 dark:border-b-white">
+          <div className=" flex justify-between items-center py-2 px-4 bg-white transition-all dark:bg-Primary-black border-b-2 border-b-sky-950 dark:border-b-white">
             <NavLink to={"/"}>
             <div className=" font-bold text-lg md:text-2xl dark:text-Primary-Green">
               Learn To Think
@@ -52,7 +52,7 @@ const Navbar = (props) => {
                 />
               </div>
               <div className=" flex items-center">
-                <div onClick={onChangeMenu} className=" md:hidden">
+                <div onClick={onChangeMenu} className=" cursor-pointer md:hidden">
                   <img className={props.isDark ? "hidden" : "w-8"} src="https://img.icons8.com/?size=100&id=3096&format=png&color=000000" alt="" />
                   <img className={props.isDark ? "w-8" : "hidden"} src="https://img.icons8.com/?size=100&id=3096&format=png&color=ffffff" alt="" />
                 </div>
