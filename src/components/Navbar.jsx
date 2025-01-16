@@ -59,8 +59,8 @@ const Navbar = (props) => {
                 <ul
                   className={
                     isMenuOpen
-                      ? " border-2 border-black md:border-none  md:top-0 right-1 px-8 py-5 top-11 transition-all bg-white dark:bg-Primary-black flex flex-col md:flex-row gap-5 dark:text-white font-medium md:text-xl md:relative fixed "
-                      : "  md:top-0 right-1 px-8 py-5 -top-40 bg-white transition-all dark:bg-Primary-black flex flex-col md:flex-row gap-5 dark:text-white font-medium md:text-xl md:relative fixed "
+                      ? " border-2 border-black md:border-none  md:top-0 right-1 px-8 py-5 top-16 transition-all bg-white dark:bg-Primary-black flex flex-col md:flex-row gap-5 dark:text-white font-medium md:text-xl md:relative fixed "
+                      : "  md:top-0 -right-[100%] px-8 py-5 top-16 bg-white transition-all dark:bg-Primary-black flex flex-col md:flex-row gap-5 dark:text-white font-medium md:text-xl md:relative fixed "
                   }
                 >
                   <li>

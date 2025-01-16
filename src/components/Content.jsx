@@ -12,7 +12,7 @@ const Content = () => {
           content={
             "Learn DBMS with interactive tutorials, quizzes, and real-world projects to enhance your understanding and skills."
           }
-          link={"/dbms"}
+          link={"article/dbms"}
         />
 
         <ContextCard
@@ -20,7 +20,7 @@ const Content = () => {
           content={
             "Interview problems solved"
           }
-          link={"/interview"}
+          link={"article/interview"}
         />
         </div>
       </div>

@@ -17,7 +17,7 @@ const MarkdownRender = (props) => {
 
   return (
     <>
-    <div className=" dark:bg-sky-950 dark:text-white">
+    <div className=" dark:bg-Secondary-black dark:text-white">
         <div className="pt-6 mx-5 md:mx-40">
           <ReactMarkdown
             components={{
@@ -25,7 +25,7 @@ const MarkdownRender = (props) => {
                 const match = /language-(\w+)/.exec(className || "");
                 return match ? (
                   <>
-                    <div className=" flex text-white justify-between bg-slate-700 -mb-2 p-2 mt-2 rounded-t-[20px]">
+                    <div className=" flex text-white justify-between bg-Primary-black dark:bg-Primary-Green -mb-2 p-2 mt-2 rounded-t-[15px]">
                       <div className=" ml-3">Code</div>
                       <div
                         className=" mr-3 cursor-pointer"
@@ -70,9 +70,10 @@ const MarkdownRender = (props) => {
                       PreTag="div"
                       language={match[1]}
                       style={atomDark}
+                      className="dark:border-Primary-Green border-Primary-black  border-solid border-2"
                       customStyle={{
                         padding: "25px",
-                        borderRadius: "0px 0px 20px 20px",
+                        borderRadius: "0px 0px 15px 15px",
                       }}
                       {...rest}
                     >
