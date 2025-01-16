@@ -24,6 +24,8 @@ function App() {
         <Navbar onChangeMode={changeMode} isDark={isDark}/>
       </div>
 
+      <div className=" -z-10 w-full h-full dark:bg-Secondary-black bg-white"></div>
+
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />

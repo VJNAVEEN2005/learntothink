@@ -17,9 +17,9 @@ const ArticlePage = () => {
 
   return (<>
     <motion.div
-      initial={{x:"-100%", opacity:0}}
-      animate={{x:0, opacity:1}}
-      exit={{x:"-100%", opacity:0}}
+      // initial={{x:-100, opacity:0}}
+      // animate={{x:0, opacity:1}}
+      // exit={{x:100, opacity:0}}
     >
     {content ? <MarkdownRender content={content} /> : <h1 className=" dark:text-white">Loading...</h1>}
     </motion.div>
