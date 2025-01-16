@@ -16,6 +16,7 @@ const Content = () => {
           content="Interview problems solved with structured explanations."
           link="article/interview"
         />
+        
       </div>
 
       <h1 className="dark:text-white text-2xl font-bold">Language</h1>
@@ -24,6 +25,21 @@ const Content = () => {
           title="Python"
           content="Learn Python with hands-on exercises, tutorials, and real-world projects."
           link="article/python"
+        />
+        <ContextCard
+          title={"C"}
+          content={"Learn C"}
+          link={"article/c"}
+        />
+        <ContextCard
+          title={"C++"}
+          content={"Learn C++"}
+          link={"article/cpp"}
+        />
+        <ContextCard
+          title={"Js"}
+          content={"Learn Js"}
+          link={"article/js"}
         />
         
       </div>

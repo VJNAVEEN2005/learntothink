@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
 
 const MarkdownRender = (props) => {
 
@@ -18,13 +19,14 @@ const MarkdownRender = (props) => {
 
   return (
     <>
-    <div className=" dark:bg-Secondary-black dark:text-white">
+    <div className="dark:bg-Secondary-black dark:text-white pb-5">
         <div className="pt-6 mx-5 md:mx-40">
           <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
+            remarkPlugins={[remarkGfm]}
+            className="prose prose-invert max-w-full"
             components={{
               table({ children }) {
-                return <table className=" border my-6 rounded-[20px]">{children}</table>;
+                return <table className="border my-6 rounded-[20px]">{children}</table>;
               },
               th({ children }) {
                 return <th className="border border-gray-300 px-4 py-2 text-white  bg-Secondary-black dark:bg-Primary-Green">{children}</th>;
@@ -49,9 +51,7 @@ const MarkdownRender = (props) => {
                         }}
                       >
                         <div
-                          className={
-                            isCopied ? " flex items-center gap-2" : "hidden"
-                          }
+                          className={isCopied ? " flex items-center gap-2" : "hidden"}
                         >
                           <div className=" w-5">
                             <img
@@ -63,9 +63,7 @@ const MarkdownRender = (props) => {
                         </div>
 
                         <div
-                          className={
-                            !isCopied ? " flex items-center gap-2" : "hidden"
-                          }
+                          className={ !isCopied ? " flex items-center gap-2" : "hidden"}
                         >
                           <div className=" w-5">
                             <img
@@ -97,16 +95,42 @@ const MarkdownRender = (props) => {
                   </code>
                 );
               },
+              p({ children }) {
+                return <p className="text-lg leading-relaxed my-4">{children}</p>;
+              },
+              h1({ children }) {
+                return <h1 className="text-3xl font-semibold mt-8 mb-4">{children}</h1>;
+              },
+              h2({ children }) {
+                return <h2 className="text-2xl font-semibold mt-8 mb-4">{children}</h2>;
+              },
+              h3({ children }) {
+                return <h3 className="text-xl font-semibold mt-8 mb-4">{children}</h3>;
+              },
+              blockquote({ children }) {
+                return (
+                  <blockquote className="border-l-4 pl-4 italic text-gray-500 my-6">
+                    {children}
+                  </blockquote>
+                );
+              },
+              ul({ children }) {
+                return <ul className="list-disc pl-6 my-4">{children}</ul>;
+              },
+              ol({ children }) {
+                return <ol className="list-decimal pl-6 my-4">{children}</ol>;
+              },
+              li({ children }) {
+                return <li className="text-base">{children}</li>;
+              },
             }}
-
-
           >
             {markdownContent}
           </ReactMarkdown>
         </div>
-        </div>
+    </div>
     </>
-  )
-}
+  );
+};
 
-export default MarkdownRender
+export default MarkdownRender;
