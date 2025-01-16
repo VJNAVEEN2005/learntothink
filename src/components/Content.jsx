@@ -4,9 +4,9 @@ import ContextCard from "./ContextCard";
 const Content = () => {
   return (
     <>
-      <div className=" mt-6 mx-40">
+      <div className=" mt-6 mx-4 md:mx-40">
         <h1 className="dark:text-white text-2xl font-bold">Concept</h1>
-        <div className=" flex flex-wrap justify-start">
+        <div className=" flex flex-wrap justify-evenly">
         <ContextCard
           title={"DBMS"}
           content={

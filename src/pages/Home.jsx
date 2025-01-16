@@ -5,7 +5,7 @@ import Content from "../components/Content";
 const Home = () => {
   return (
     <>
-      <div className=" dark:bg-sky-950">
+      <div className=" dark:bg-Secondary-black">
         <div className=" dark:text-white ml-0 mr-0 flex justify-center flex-col gap-12 h-[350px] items-center">
           <div className=" text-xl md:text-4xl font-semibold">
             Hello, What Do You Want To Learn??

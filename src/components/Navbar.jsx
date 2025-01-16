@@ -12,9 +12,9 @@ const Navbar = (props) => {
     <>
       <header>
         <nav>
-          <div className=" flex justify-between items-center md:py-2 px-4 bg-white transition-all dark:bg-sky-950 border-b-2 border-b-sky-950 dark:border-b-white">
+          <div className=" flex justify-between items-center md:py-2 px-4 bg-white transition-all dark:bg-Primary-black border-b-2 border-b-sky-950 dark:border-b-white">
             <NavLink to={"/"}>
-            <div className=" font-bold text-lg md:text-2xl dark:text-white">
+            <div className=" font-bold text-lg md:text-2xl dark:text-Primary-Green">
               Learn To Think
             </div>
             </NavLink>
@@ -59,8 +59,8 @@ const Navbar = (props) => {
                 <ul
                   className={
                     isMenuOpen
-                      ? " border-2 border-black md:border-none  md:top-0 right-1 px-8 py-5 top-11 transition-all bg-white dark:bg-sky-950 flex flex-col md:flex-row gap-5 dark:text-white font-medium md:text-xl md:relative fixed "
-                      : "  md:top-0 right-1 px-8 py-5 -top-40 bg-white transition-all dark:bg-sky-950 flex flex-col md:flex-row gap-5 dark:text-white font-medium md:text-xl md:relative fixed "
+                      ? " border-2 border-black md:border-none  md:top-0 right-1 px-8 py-5 top-11 transition-all bg-white dark:bg-Primary-black flex flex-col md:flex-row gap-5 dark:text-white font-medium md:text-xl md:relative fixed "
+                      : "  md:top-0 right-1 px-8 py-5 -top-40 bg-white transition-all dark:bg-Primary-black flex flex-col md:flex-row gap-5 dark:text-white font-medium md:text-xl md:relative fixed "
                   }
                 >
                   <li>
