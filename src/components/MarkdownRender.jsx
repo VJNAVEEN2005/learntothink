@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import remarkGfm from "remark-gfm";
 
 const MarkdownRender = (props) => {
 
@@ -20,7 +21,17 @@ const MarkdownRender = (props) => {
     <div className=" dark:bg-Secondary-black dark:text-white">
         <div className="pt-6 mx-5 md:mx-40">
           <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
             components={{
+              table({ children }) {
+                return <table className=" border my-6 rounded-[20px]">{children}</table>;
+              },
+              th({ children }) {
+                return <th className="border border-gray-300 px-4 py-2 text-white  bg-Secondary-black dark:bg-Primary-Green">{children}</th>;
+              },
+              td({ children }) {
+                return <td className="border border-gray-300 px-4 py-2">{children}</td>;
+              },
               code({ className, children, ...rest }) {
                 const match = /language-(\w+)/.exec(className || "");
                 return match ? (
