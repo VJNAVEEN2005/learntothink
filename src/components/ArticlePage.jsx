@@ -21,7 +21,7 @@ const ArticlePage = () => {
       animate={{x:0, opacity:1}}
       exit={{x:"-100%", opacity:0}}
     >
-    {content ? <MarkdownRender content={content} /> : <h1>Loading...</h1>}
+    {content ? <MarkdownRender content={content} /> : <h1 className=" dark:text-white">Loading...</h1>}
     </motion.div>
   </>);
 };
