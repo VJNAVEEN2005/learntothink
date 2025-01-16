@@ -18,16 +18,16 @@ const Content = () => {
         />
       </div>
 
-      <h1 className="dark:text-white text-2xl font-bold mt-6">Language</h1>
-      <div className="flex flex-wrap">
-        <div className="border-2 border-black dark:border-none bg-white w-96 p-5 rounded-2xl m-5 cursor-pointer">
-          <h1 className="text-lg font-bold">Python</h1>
-          <hr className="border-solid border-black" />
-          <p>
-            Learn Python with hands-on exercises, tutorials, and real-world projects.
-          </p>
-        </div>
+      <h1 className="dark:text-white text-2xl font-bold">Language</h1>
+      <div className="flex flex-wrap justify-evenly">
+        <ContextCard
+          title="Python"
+          content="Learn Python with hands-on exercises, tutorials, and real-world projects."
+          link="article/python"
+        />
+        
       </div>
+
     </div>
   );
 };
