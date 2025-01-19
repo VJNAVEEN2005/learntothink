@@ -23,7 +23,7 @@ const Content = () => {
       });
   }, []);
 
-  if (loading) return <p className="text-center">Loading topics...</p>;
+  if (loading) return <p className="text-center dark:text-white">Loading topics...</p>;
   if (error) return <p className="text-center text-red-500">{error}</p>;
 
   return (

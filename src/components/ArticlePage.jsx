@@ -31,7 +31,7 @@ const ArticlePage = () => {
         {!loading ? (
           <MarkdownRender content={groupedData} />
         ) : (
-          <h1 className=" dark:text-white">Loading...</h1>
+          <h1 className="">Loading...</h1>
         )}
       </motion.div>
     </>
