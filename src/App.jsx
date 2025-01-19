@@ -7,7 +7,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import { AnimatePresence } from "motion/react";
 import ArticlePage from "./components/ArticlePage";
-import Interview from "./data/interview/Interview";
 
 function App() {
   const location = useLocation();
@@ -31,8 +30,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="article/:id" element={<ArticlePage/>}/>
-          <Route path="interview" element={<Interview />} />
+          <Route path="article/:category/:id" element={<ArticlePage/>}/>
         </Routes>
       </AnimatePresence>
     </div>

@@ -1,29 +1,41 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MarkdownRender from "./MarkdownRender";
-import { allData } from "../data/data";
 import { motion } from "motion/react";
+import axios from "axios";
+import api from '../api/backend.json'
 
 const ArticlePage = () => {
-  const { id } = useParams();
-  const [content, setContent] = useState("");
+  const { category, id } = useParams();
+  const [groupedData, setGroupedData] = useState("");
+  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
-    const foundData = allData.find((item) => item.Topic === id);
-    if (foundData) {
-      setContent(foundData.content);
-    }
-  }, [id]);
+    axios
+      .get(`${api.primary}/api/topic/${category}/${id}`)
+      .then((response) => {
+        setGroupedData(response.data.content);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching topics:", err);
+        setLoading(false);
+      });
+  });
 
-  return (<>
-    <motion.div
-      // initial={{x:-100, opacity:0}}
-      // animate={{x:0, opacity:1}}
-      // exit={{x:100, opacity:0}}
-    >
-    {content ? <MarkdownRender content={content} /> : <h1 className=" dark:text-white">Loading...</h1>}
-    </motion.div>
-  </>);
+
+  return (
+    <>
+      <motion.div>
+        {!loading ? (
+          <MarkdownRender content={groupedData} />
+        ) : (
+          <h1 className=" dark:text-white">Loading...</h1>
+        )}
+      </motion.div>
+    </>
+  );
 };
 
 export default ArticlePage;

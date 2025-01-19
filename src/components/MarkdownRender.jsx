@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import remarkGfm from "remark-gfm";
 
 const MarkdownRender = (props) => {
-
-      const [markdownContent, setMarkdownContent] = useState("");
     
       const [isCopied, setIsCopied] = useState(false);
-    
-      useEffect(() => {
-        fetch(props.content)
-          .then((response) => response.text())
-          .then((text) => setMarkdownContent(text));
-      }, [props.content]);
 
   return (
     <>
@@ -124,7 +116,7 @@ const MarkdownRender = (props) => {
               },
             }}
           >
-            {markdownContent}
+            {props.content}
           </ReactMarkdown>
         </div>
     </div>
